@@ -42,9 +42,7 @@ insert into lobbies (lobby_name, admin_id) values ('Bad Boys', 1);
 create table belongs_to (
     id serial not null primary key,
     participant_id int references profiles(profile_id),
-    unique(participant_id),
-    lobby_id int references lobbies(lobby_id),
-    unique(lobby_id)
+    lobby_id int references lobbies(lobby_id)
 );
 
 insert into belongs_to (participant_id, lobby_id) values (1, 1);
@@ -55,9 +53,7 @@ create table messages (
     id serial not null primary key,
     content varchar not null,
     author_id int references profiles(profile_id),
-    unique(author_id),
-    lobby_id int references lobbies(lobby_id),
-    unique(lobby_id)
+    lobby_id int references lobbies(lobby_id)
 );
 
 insert into messages (content, author_id, lobby_id) values ('One', 1, 1);

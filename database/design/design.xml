@@ -66,9 +66,12 @@
 <part>profile_id</part>
 </key>
 </table>
-<table x="863" y="234" name="lobby">
+<table x="863" y="234" name="lobbies">
 <row name="lobby_id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="lobby_name" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <row name="admin_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -88,7 +91,7 @@
 </row>
 <row name="lobby_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="lobby" row="lobby_id" />
+<default>NULL</default><relation table="lobbies" row="lobby_id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -107,7 +110,7 @@
 </row>
 <row name="lobby_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="lobby" row="lobby_id" />
+<default>NULL</default><relation table="lobbies" row="lobby_id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
