@@ -21,3 +21,9 @@ We will use [Express.js](https://expressjs.com/) and All information will be sto
 * Direct message system (user to user)
 * Anti-brutforce (ex: people cannot attempt more than 5 failed logins/hour)
 * Admins can add people that have not yet registered to the plateform
+
+## Other ressources
+
+[bcrypt.js](https://www.npmjs.com/package/bcrypt)
+[jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+[https://jwt.io/](https://jwt.io/)
