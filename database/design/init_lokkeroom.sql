@@ -1,6 +1,7 @@
 create table users (
     user_id serial not null primary key,
     email varchar not null,
+    unique(email),
     password varchar not null
 );
 
@@ -11,6 +12,7 @@ insert into users (email, password) values ('gest@gmail.com', '1234');
 create table profiles (
     profile_id serial not null primary key,
     username varchar not null,
+    unique(username),
     user_id int references users(user_id),
     unique(user_id)
 );
@@ -33,6 +35,7 @@ insert into direct_messages (content, author_id, recipient_id) values ('Hello', 
 create table lobbies (
     lobby_id serial not null primary key,
     lobby_name varchar not null,
+    unique(lobby_name),
     admin_id int references profiles(profile_id),
     unique(admin_id)
 );
