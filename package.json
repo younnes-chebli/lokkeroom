@@ -2,9 +2,9 @@
   "name": "lokkeroom",
   "version": "1.0.0",
   "description": "",
-  "main": "index.mjs",
+  "main": "app.mjs",
   "scripts": {
-    "dev": "nodemon index.mjs",
+    "dev": "nodemon app.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

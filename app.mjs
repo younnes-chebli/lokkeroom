@@ -1,10 +1,10 @@
 import express from "express";
 const app = express();
 const PORT = 3000;
-import dbConnection from "./database/dbConnection.mjs";
-import defaultRouter from "./routers/defaultRouter.mjs";
-import signupRouter from "./routers/signupRouter.mjs";
-import loginRouter from "./routers/loginRouter.mjs";
+import dbConnection from "./src/database/dbConnection.mjs";
+import defaultRouter from "./src/api/defaultRouter.mjs";
+import signupRouter from "./src/api/auth/signupRouter.mjs";
+import loginRouter from "./src/api/auth/loginRouter.mjs";
 
 app.use(express.json());
 
