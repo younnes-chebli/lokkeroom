@@ -5,9 +5,9 @@ create table users (
     password varchar not null
 );
 
-insert into users (email, password) values ('younnesc@gmail.com', '1234');
-insert into users (email, password) values ('toto@gmail.com', '1234');
-insert into users (email, password) values ('gest@gmail.com', '1234');
+-- insert into users (email, password) values ('younnesc@gmail.com', '1234');
+-- insert into users (email, password) values ('toto@gmail.com', '1234');
+-- insert into users (email, password) values ('gest@gmail.com', '1234');
 
 create table profiles (
     profile_id serial not null primary key,
