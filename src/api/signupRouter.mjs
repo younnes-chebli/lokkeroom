@@ -10,7 +10,12 @@ signupRouter.post("/api/register", async(req, res) => {
         const hashed_password = await hash(password);
         const success = await addUser(email, username, hashed_password);
         if (success) {
-            res.status(201).send("Added user");
+            const user = {
+                email: email,
+                username: username,
+                password: hashed_password
+            }
+            res.status(201).send(user);
         } else {
             res.status(500).send("Failed to add user or user already exists");
         }
