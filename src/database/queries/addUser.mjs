@@ -1,11 +1,11 @@
 import client from "../client.mjs";
-import userExists from "../../tools/userExists.mjs";
+import emailExists from "../../tools/emailExists.mjs";
+import usernameExists from "../../tools/usernameExists.mjs";
 
-const addUser = async(email, hashed_password) => {
-    const userAlreadyExists = await userExists(email);
-    if(!userAlreadyExists) {
+const addUser = async(email, username, hashed_password) => {
+    if(!await emailExists(email) && !await usernameExists(username)) {
         try {
-            await client.query(`INSERT INTO users (email, passwor) VALUES ('${email}', '${hashed_password}')`);
+            await client.query(`INSERT INTO users (email, username, password) VALUES ('${email}', '${username}', '${hashed_password}')`);
             return true;
         } catch(err) {
             throw err;

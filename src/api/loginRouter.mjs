@@ -1,5 +1,5 @@
 import express from "express";
-import userExists from "../tools/userExists.mjs";
+import emailExists from "../tools/emailExists.mjs";
 import getUserByEmail from "../database/queries/getUserByEmail.mjs";
 import bcrypt from "bcrypt";
 
@@ -9,7 +9,7 @@ loginRouter.post("/api/login", async(req, res) => {
     try {
         const { email, password } = req.body;
         const user = await getUserByEmail(email);
-        if(await userExists(email)) {
+        if(await emailExists(email)) {
             try {
                 if (await bcrypt.compare(password, user.password)) {
                     res.status(200).send("Login successful!");

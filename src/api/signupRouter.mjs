@@ -6,9 +6,9 @@ const signupRouter = express.Router();
 
 signupRouter.post("/api/register", async(req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, username, password } = req.body;
         const hashed_password = await hash(password);
-        const success = await addUser(email, hashed_password);
+        const success = await addUser(email, username, hashed_password);
         if (success) {
             res.status(201).send("Added user");
         } else {
