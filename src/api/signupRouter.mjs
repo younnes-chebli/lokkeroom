@@ -15,7 +15,7 @@ signupRouter.post("/api/register", async(req, res) => {
             res.status(500).send("Failed to add user or user already exists");
         }
     } catch(err) {
-        res.status(500).send("POST request failed");
+        res.status(500).send(err.stack);
     }
 });
 

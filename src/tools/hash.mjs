@@ -5,7 +5,7 @@ const hash = async(password) => {
         const hashed_password = await bcrypt.hash(password, 10);
         return hashed_password;
     } catch(err) {
-        console.log("Hash failed", err.stack);
+        throw err;
     }
 };
 
