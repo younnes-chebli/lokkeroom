@@ -1,6 +1,6 @@
 import express from "express";
-import userExists from "../../tools/userExists.mjs";
-import getUserByEmail from "../../database/queries/getUserByEmail.mjs";
+import userExists from "../tools/userExists.mjs";
+import getUserByEmail from "../database/queries/getUserByEmail.mjs";
 import bcrypt from "bcrypt";
 
 const loginRouter = express.Router();
