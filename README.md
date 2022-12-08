@@ -24,6 +24,6 @@ We will use [Express.js](https://expressjs.com/) and All information will be sto
 
 ## Other ressources
 
-[bcrypt.js](https://www.npmjs.com/package/bcrypt)
-[jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
-[https://jwt.io/](https://jwt.io/)
+* [bcrypt.js](https://www.npmjs.com/package/bcrypt)
+* [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+* [https://jwt.io/](https://jwt.io/)
