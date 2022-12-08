@@ -4,6 +4,7 @@ import getUserByEmail from "../database/queries/getUserByEmail.mjs";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import * as dotenv from "dotenv";
+
 dotenv.config();
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 

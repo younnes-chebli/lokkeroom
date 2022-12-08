@@ -1,9 +1,12 @@
 import * as dotenv from "dotenv";
-dotenv.config();
-const PG_PASSWORD = process.env.PG_PASSWORD;
 import pg from "pg";
 
-const client = new pg.Client({
+dotenv.config();
+const PG_PASSWORD = process.env.PG_PASSWORD;
+
+const { Client } = pg;
+
+const client = new Client({
     host: "localhost",
     user: "lokkeroom_admin",
     port: 5432,
