@@ -1,4 +1,4 @@
-import client from "../client.mjs";
+import client from "../../config/client.mjs";
 
 const getUserByEmail = async(email) => {
     try {

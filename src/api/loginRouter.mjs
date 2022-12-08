@@ -1,6 +1,6 @@
 import express from "express";
 import emailExists from "../tools/emailExists.mjs";
-import getUserByEmail from "../database/queries/getUserByEmail.mjs";
+import getUserByEmail from "../database/queries/users/getUserByEmail.mjs";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import * as dotenv from "dotenv";

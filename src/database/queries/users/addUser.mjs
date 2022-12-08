@@ -1,6 +1,6 @@
-import client from "../client.mjs";
-import emailExists from "../../tools/emailExists.mjs";
-import usernameExists from "../../tools/usernameExists.mjs";
+import client from "../../config/client.mjs";
+import emailExists from "../../../tools/emailExists.mjs";
+import usernameExists from "../../../tools/usernameExists.mjs";
 
 const addUser = async(email, username, hashed_password) => {
     if(!await emailExists(email) && !await usernameExists(username)) {
