@@ -52,3 +52,5 @@ ALTER TABLE
     "belongs_to" ADD CONSTRAINT "belongs_to_lobby_foreign" FOREIGN KEY("lobby") REFERENCES "lobbies"("id");
 ALTER TABLE
     "messages" ADD CONSTRAINT "messages_lobby_foreign" FOREIGN KEY("lobby") REFERENCES "lobbies"("id");
+ALTER TABLE
+    "lobbies" ADD CONSTRAINT "lobbies_admin_foreign" FOREIGN KEY("admin") REFERENCES "users"("id");
